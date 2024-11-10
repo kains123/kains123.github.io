@@ -2,7 +2,7 @@ title: Materials.
 subtitle: ""
 description: ""
 keywords: null
-author: John Doe
+author: Jin
 language: en
 timezone: ""
 url: http://example.com
@@ -62,5 +62,4 @@ theme: icarus
 deploy:
   type: git
   repo: https://github.com/kains123/kains123.github.io
-  # example, https://github.com/hexojs/hexojs.github.io
   branch: gh-pages
