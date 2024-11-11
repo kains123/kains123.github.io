@@ -1,5 +1,5 @@
 ---
-title: hihi
+title: 2. Protein biosynthesis; a biological application of the principle of complementarity
 date:
   "[object Object]": null
 categories:
@@ -7,9 +7,4 @@ categories:
   - design principles in biomatter
 ---
 
-# hihih
-
-$$
-f(x)=ax^2+bx+c\\
-g(x)=Ax^4
-$$
+## 2.1.

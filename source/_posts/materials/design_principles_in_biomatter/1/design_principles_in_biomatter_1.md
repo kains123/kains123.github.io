@@ -7,4 +7,6 @@ categories:
   - design principles in biomatter
 ---
 
-# CAN
+## 2. Protein biosynthesis: a biological application of the principle of complementarity
+
+## 2.1.

@@ -67,74 +67,71 @@ where:
 - $$\(\nabla\_{\mathbf{Z}}\)$$ is the divergence operator in the $$\(6N\)$$-dimensional phase space.
 - $$\(\rho \dot{\mathbf{Z}}\)$$ represents the **probability current** in phase space.
 
-**Divergence Operator in Phase Space** is
+**1. Liouville equation**
+Hamiltonian dynamics can be described as an incompressible flow in phase space.
 
-The divergence operator $$\(\nabla\_{\mathbf{Z}}\)$$ in phase space is defined as:
+$$\frac{D\Omega}{Dt} = \frac{\partial \Omega}{\partial t} + \dot{Z} \cdot \nabla_Z \Omega = 0$$
 
-\[
-\nabla*{\mathbf{Z}} = \left(\frac{\partial}{\partial q_1}, \ldots, \frac{\partial}{\partial q*{3N}}, \frac{\partial}{\partial p*1}, \ldots, \frac{\partial}{\partial p*{3N}}\right).
-\]
+**2. Liouville Operator and Poisson Brackets**
 
-This operator takes into account all position and momentum coordinates in the \(6N\)-dimensional space.
+- Liouville equation II
+  $$\frac{\partial \Omega}{\partial t} = -i\mathcal{L} \Omega$$
 
-### 5. **Applying the Divergence Theorem**
+$\mathcal{L}$ is the Liouville operator, which can be defined using Possion brackets.
 
-To derive the continuity equation in phase space, we use the **divergence theorem**, which states:
+$$
+i\mathcal{L}\rho = \dot{Z} \cdot \nabla_Z \rho,
+$$
 
-\[
-\int*{\Omega} \nabla*{\mathbf{Z}} \cdot (\rho \dot{\mathbf{Z}}) \, d\mathbf{Z} = \int\_{S} (\rho \dot{\mathbf{Z}}) \cdot d\mathbf{S},
-\]
+- Poisson bracket
+  $$
+  \{A, B\} = \sum_{\alpha=1}^{3N} \left( \frac{\partial A}{\partial q_\alpha} \frac{\partial B}{\partial p_\alpha} - \frac{\partial A}{\partial p_\alpha} \frac{\partial B}{\partial q_\alpha} \right).
+  $$
 
-where:
+Thus, Liouville Equation is
 
-- \(\Omega\) is an arbitrary volume in phase space.
-- \(S\) is the boundary surface of \(\Omega\).
+$$
+\frac{\partial \rho}{\partial t} = -\{ \rho, H \}
+$$
 
-The left side represents the total divergence of the probability current inside \(\Omega\), and the right side represents the flux of this current across the boundary \(S\). For any arbitrary choice of \(\Omega\), the equality implies the local form of the continuity equation:
+If the phase space distribution function \(\rho(Z, t)\) is conserved, it implies:
 
-\[
-\frac{\partial \rho}{\partial t} + \nabla\_{\mathbf{Z}} \cdot (\rho \dot{\mathbf{Z}}) = 0.
-\]
+$$
+\{ \rho, H \} = 0.
+$$
 
-### 6. **ensemble density**
+- Phase Space Volume Preservation
 
-We can expand the divergence term \(\nabla\_{\mathbf{Z}} \cdot (\rho \dot{\mathbf{Z}})\):
+$$
+\int \rho(Z, 0) \, dZ_0 = \int \rho(Z, t) \, dZ_t
+$$
 
-\[
-\nabla*{\mathbf{Z}} \cdot (\rho \dot{\mathbf{Z}}) = \dot{\mathbf{Z}} \cdot \nabla*{\mathbf{Z}} \rho + \rho \nabla\_{\mathbf{Z}} \cdot \dot{\mathbf{Z}},
-\]
+## 3.2 Statistical Ensembles in Equilibrium
 
-where:
+1. Equilibrium Condition
+   For a system to be in equilibrium, the phase space distribution function $\(\rho(Z, t)\)$ should not explicitly depend on time:
 
-- \(\dot{\mathbf{Z}} \cdot \nabla\_{\mathbf{Z}} \rho\) represents the **advection** of the ensemble density along the flow in phase space.
-- \(\rho \nabla\_{\mathbf{Z}} \cdot \dot{\mathbf{Z}}\) represents the **divergence of the phase space velocity**.
+   $frac{\partial \rho}{\partial t} = 0$
+   $\{\rho, H\} = 0$$\
 
-### 7. **Material Derivative and Liouville's Equation**
+2. **Ergodic Hypothesis**
+   The ergodic hypothesis states that, given an infinite amount of time, an ergodic system will eventually visit all possible states that are accessible to it.
 
-We can introduce the **material derivative** (or total derivative) to describe the change in \(\rho\) as we move with the flow in phase space:
+   For **Hamiltonian systems**, this implies that the system will cover all points on a hypersurface where the Hamiltonian \( H \) is constant.
 
-\[
-\frac{D\rho}{Dt} \equiv \frac{\partial \rho}{\partial t} + \dot{\mathbf{Z}} \cdot \nabla\_{\mathbf{Z}} \rho.
-\]
+**Ensemble and Temporal Average**
+In an ergodic system, the **ensemble average** of a quantity $A$ is equivalent to its **temporal average**
+$$A = \langle a \rangle = \lim_{T \to \infty} \frac{1}{T} \int_0^T a(Z(t)) \, dt$$
 
-The continuity equation can now be rewritten using the material derivative:
+3. types of statistical ensembles
 
-\[
-\frac{D\rho}{Dt} = -\rho \nabla\_{\mathbf{Z}} \cdot \dot{\mathbf{Z}}.
-\]
+   The types of statistical ensembles are classified based on the quantities held constant:
+   ex) **Microcanonical Ensemble** ($\(N, V, E = \text{const.}\)$):
 
-In a **conservative system**, where the phase space flow is incompressible (\(\nabla\_{\mathbf{Z}} \cdot \dot{\mathbf{Z}} = 0\)), this simplifies to:
+   - Represents an **isolated** system with fixed particle number \(N\), volume \(V\), and energy \(E\).
+   - The system follows Hamiltonian dynamics, and the total energy is conserved.
 
-\[
-\frac{D\rho}{Dt} = 0 \implies \frac{\partial \rho}{\partial t} + \dot{\mathbf{Z}} \cdot \nabla\_{\mathbf{Z}} \rho = 0.
-\]
+   **Canonical Ensemble** ($\(N, V, T = \text{const.}\)$):
 
-This is known as **Liouville's equation**, which states that the ensemble density is constant along the trajectories of the system in phase space.
-
-### 8. **Conclusion**
-
-- The **continuity equation in phase space** mirrors the mass continuity equation in fluid dynamics, expressing the conservation of probability density rather than mass.
-- The velocity \(\dot{\mathbf{Z}}\) in phase space is analogous to the fluid velocity \(\mathbf{u}\).
-- **Liouville's theorem** implies that, for a conservative system, the density of microstates in phase space remains constant as the system evolves.
-
-This analogy provides a powerful way to understand the behavior of complex systems in statistical mechanics using concepts familiar from fluid dynamics.
+   - Represents a system in contact with a **heat bath** at a fixed temperature $T$.
+   - The total energy of the system is not conserved because it can exchange energy with the heat bath.

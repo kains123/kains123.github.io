@@ -12,6 +12,8 @@ mathjax: true
 
 A spatial domain $\Omega_0$ and is supposed to be stress free. The reference configuration is $t = 0$. The current configuration at time $t$.
 
+$\underline{f} = {()}
+
 $T = [0, t_{\text{end}}]$ denotes the time interval of interest. Note that a fixed
 
 $\mathbf{\underline{X}}$ for all times points to a specific material element. Therefore $\mathbf{\underline{X}}$ can directly be identified with material elements. Furthermore, assuming that the deformation map is invertible.
@@ -28,3 +30,9 @@ $$\underline{U}(\underline{X}, t) = \underline{x}(\underline{X}, t) - \underline
 
 A spatial coodinates for the motion of a continuum (Eulerian):
 $$\underline{u}(\underline{x}, t) = \underline{x} - \underline{X}(\underline{x}, t)$$
+
+The **material velocity**:
+$$\underline{V}(\underline{X}, t) = \frac{\partial \varphi(X, t)}{\partial t} = \frac{\partial x(X, t)}{\partial t} = \frac{\partial (X + U(X, t))}{\partial t} = \frac{\partial U(X, t)}{\partial t}$$
+
+The **material aceleration**:
+$$A(X, t) = \frac{\partial V(X, t)}{\partial t} = \frac{\partial^2 \varphi(X, t)}{\partial t^2} = \frac{\partial^2 U(X, t)}{\partial t^2}$$
