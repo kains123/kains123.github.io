@@ -135,3 +135,30 @@ $$A = \langle a \rangle = \lim_{T \to \infty} \frac{1}{T} \int_0^T a(Z(t)) \, dt
 
    - Represents a system in contact with a **heat bath** at a fixed temperature $T$.
    - The total energy of the system is not conserved because it can exchange energy with the heat bath.
+
+## 3.3 Basic Thermodynamics
+
+**Definitions**
+A thermodynamics system is a macroscopic system. The thermodynamic state of the system is uniquely defined by specification of a set of control variables, e.g, temperature, pressure, volume etc.
+
+Two types of thermodynamic variables:
+
+- extensive variables are proportional to the system size (ex. internal energy, mass, entropy)
+- intensive variables are independent of the system size (ex. pressure, temperature, density, chemial potential)
+
+$pV = nRT$
+
+## 3.4 Laws of Thermodynamics
+
+- Zeroth Law (0법칙)
+  Establishes the concept of temperature and thermal equilibrium. If two systems are in thermal equilibrium with a third system, they are also in equilibrium with each other.
+
+- First Law (1법칙)
+  The conservation energy. The energy E of the system can be changed by performing work W on it and/or by adding heat Q to it
+  $dE = \delta W + \delta Q$
+
+- Second Law (2법칙)
+  $dS \geq \frac{\delta Q}{T}$
+
+- Third Law
+  The entropy of a system at the absolute zero temperature is a universal constant, which we can set to zero. The T = 0K temperature can never be physically reached.
