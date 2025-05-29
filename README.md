@@ -1,5 +1,6 @@
-# kains123.github.io
+# YEJIN LEE
 
-## hexo deploy -generate
+My fields of interest include Biology and Materials Science & Engineering. 
 
-## hexo server
+Technologies Used
+ - Catia, Django, Node.js, React, React Native, Graphql, REST Api, ML
